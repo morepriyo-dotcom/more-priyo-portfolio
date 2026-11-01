@@ -1,5 +1,6 @@
 import HeroParticles from "./hero-particles";
 import ScrollMotion from "./scroll-motion";
+import CommandPalette from "./command-palette";
 
 const projects = [
   {
@@ -61,6 +62,7 @@ export default function Home() {
   return (
     <>
       <ScrollMotion />
+      <CommandPalette />
       <div className="opening-sequence" aria-hidden="true"><span className="opening-mark">MP</span><span className="opening-track"><i /></span><span className="opening-caption">MORE PRIYO <b>·</b> PORTFOLIO</span></div>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="More Priyo, home"><span className="brand-mark">MP</span><span>MORE PRIYO</span></a>
