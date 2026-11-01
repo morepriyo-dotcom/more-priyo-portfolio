@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# More Priyo — Portfolio
 
-## Getting Started
+Personal portfolio for More Priyo, a second-year B.Tech student in Computer Science and Engineering (Data Science) at CVR College of Engineering.
 
-First, run the development server:
+The site is built with Next.js App Router, React, TypeScript, and CSS. It features a responsive dark visual design, an animated particle portrait, project cards, skills, education, events, certificates, contact links, and a downloadable résumé.
+
+## Projects featured
+
+- **JanSetu AI** — Civic issue reporting platform connecting citizens and government. [Live site](https://jansetu-gray.vercel.app/) · [GitHub](https://github.com/morepriyo-dotcom/JanSetu-AI)
+- **SkillBridge** — Student-to-industry platform. [Live site](https://skillbridge-sih-rho.vercel.app/) · [GitHub profile](https://github.com/morepriyo-dotcom)
+- **Back2U** — Lost-and-found recovery platform with multimodal matching and privacy-aware claims. [Live site](https://back2-u-eta.vercel.app/) · [GitHub](https://github.com/morepriyo-dotcom/Back2U)
+
+## Run locally
+
+Install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a production build with `npm run build`, then serve it locally with `npm run start`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Main files
 
-## Learn More
+- `app/page.tsx` — portfolio content and project links
+- `app/globals.css` — layout, responsive styles, animations, and theme
+- `app/hero-particles.tsx` — animated portrait effect
+- `app/scroll-motion.tsx` — scroll reveal effects
+- `app/layout.tsx` — page metadata and document layout
+- `public/more-priyo.jpeg` — portrait used by the particle effect
+- `public/More-Priyo-Resume.pdf` — downloadable résumé
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Import this repository into Vercel and keep its detected Next.js build settings. Connect the production branch for automatic production deployments and preview deployments for changes.
