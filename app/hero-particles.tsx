@@ -201,14 +201,20 @@ export default function HeroParticles() {
     const observer = new ResizeObserver(resize);
     observer.observe(canvas);
     canvas.addEventListener("pointermove", onPointerMove);
+    canvas.addEventListener("pointerdown", onPointerMove);
     canvas.addEventListener("pointerleave", onPointerLeave);
+    canvas.addEventListener("pointerup", onPointerLeave);
+    canvas.addEventListener("pointercancel", onPointerLeave);
 
     return () => {
       cancelAnimationFrame(frame);
       visibilityObserver.disconnect();
       observer.disconnect();
       canvas.removeEventListener("pointermove", onPointerMove);
+      canvas.removeEventListener("pointerdown", onPointerMove);
       canvas.removeEventListener("pointerleave", onPointerLeave);
+      canvas.removeEventListener("pointerup", onPointerLeave);
+      canvas.removeEventListener("pointercancel", onPointerLeave);
       portrait.onload = null;
     };
   }, []);

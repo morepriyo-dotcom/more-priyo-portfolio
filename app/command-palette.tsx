@@ -58,12 +58,17 @@ export default function CommandPalette() {
       }
     };
 
-    // Attach 1-click copy enhancement to existing email links
+    // Attach 1-click copy enhancement to existing email links and auto-close mobile menu
     const onDocumentClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest(".contact-email");
       if (target) {
         e.preventDefault();
         copyEmail();
+      }
+      const navLink = (e.target as HTMLElement).closest(".mobile-menu nav a");
+      if (navLink) {
+        const details = navLink.closest("details");
+        if (details) details.removeAttribute("open");
       }
     };
 
